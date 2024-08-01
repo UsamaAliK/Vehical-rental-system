@@ -27,7 +27,7 @@ class car(Vehicle):
         with open("/Users/apple/Documents/Vehical-rental-system/cars.json","r") as fileobj:
             CARS=json.load(fileobj)
             for carz in CARS:
-            
+
                 print(f"Car Name: {carz["Car Name"]}")
                 print(f"Model: {carz["Model"]}")
                 print(f"Company: {carz["Company"]}")
@@ -39,11 +39,3 @@ class car(Vehicle):
 
 
 
-
-
-
-#cars=car("sadasd","sadasfasf",5346346,"543g","gthrt34")
-cars2=car("2024","TOYOTA","AKA 306","200000 per day","LAND CRUSER")
-#cars2.add_vehicle()
-#cars.add_vehicle()
-cars2.show_all_vehicels()
