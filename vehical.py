@@ -15,7 +15,8 @@ class Vehicle:
         raise NotImplementedError
 
 
-
+    def rent_car(self):
+        raise NotImplementedError
 
 
 
