@@ -2,7 +2,7 @@ import json
 
 from vehical import Vehicle
 class Bike(Vehicle):
-    def __init__(self,bike_name,model,company,lisence_plate,rent_price,available):
+    def __init__(self,bike_name="",model="",company="",lisence_plate="",rent_price=0,available=""):
         super().__init__(model,company,lisence_plate,rent_price,available)
         self.bike_name=bike_name
 
@@ -82,11 +82,8 @@ class Bike(Vehicle):
                 print("JSON FILE ERROR")
 
 
+
     def update_the_availability(self,rented,name,plate_no):
-
-
-
-
 
            try:
                with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json", 'r') as fileobj:
@@ -105,8 +102,6 @@ class Bike(Vehicle):
 
 
 
-bikes2=Bike("cd 70","2024","HONDA","AKA 306",2000,"yes")
-bikes2.add_vehicle()
 
 
 

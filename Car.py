@@ -1,7 +1,7 @@
 import json
 from vehical import Vehicle
 class car(Vehicle):
-    def __init__(self,model,company,lisence_plate,rent_price,avaiable,car_name,car_type):
+    def __init__(self,model="",company="",lisence_plate="",rent_price=0,avaiable="",car_name="",car_type=""):
         super().__init__(model,company,lisence_plate,rent_price,avaiable)
         self.car_name=car_name
         self.car_type=car_type
@@ -109,5 +109,5 @@ class car(Vehicle):
 
 
 
-
-
+cars=car("2024","honda","aka 305",20000,"yes","civic","sedan")
+#cars.c
