@@ -94,6 +94,20 @@ class car(Vehicle):
 
             except json.JSONDecodeError:
                 print("Car not available")
+    def update_the_availability(self,rented,name,plate_no):
+        try:
+            with open("/Users/apple/Documents/Vehical-rental-system/cars.json","r") as fileobj:
+                fileobj.seek(0)
+                CARS=json.load(fileobj)
+            for carz in CARS:
+                 if carz["Car Name"]==name and carz["plate no"]==plate_no:
+                     carz['Availability']='no' if rented else 'yes'
+            with open("/Users/apple/Documents/Vehical-rental-system/cars.json","w") as fileobj:
+                json.dump(CARS,fileobj,indent=4)
+        except json.JSONDecodeError:
+            print("JSON FILE ERROR!\n")
+
+
 
 
 

@@ -21,8 +21,12 @@ class Vehicle(ABC):
     def check_availability(self,name,plate):
         raise NotImplementedError
 
-
     @abstractmethod
+    def update_the_availability(self,rented,name,plate_no):
+        raise NotImplementedError
+
+
+
     def rent_car(self):
         raise NotImplementedError
 

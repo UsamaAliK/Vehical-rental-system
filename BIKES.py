@@ -16,7 +16,7 @@ class Bike(Vehicle):
                    "RENT PER DAY":self.rent_price,
                    "AVAILABILITY":self.available}
         bike_data=[]
-        with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json","r") as fileobj:
+        with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json","a+") as fileobj:
             fileobj.seek(0)
             try:
                 bike_data=json.load(fileobj)
@@ -80,6 +80,36 @@ class Bike(Vehicle):
 
             except json.JSONDecodeError:
                 print("JSON FILE ERROR")
+
+
+    def update_the_availability(self,rented,name,plate_no):
+
+
+
+
+
+           try:
+               with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json", 'r') as fileobj:
+                   fileobj.seek(0)
+
+                   BIKES=json.load(fileobj)
+
+               for bikez in BIKES:
+                    if bikez["BIKE NAME"]==name and bikez["PLATE NO"]==plate_no:
+                        bikez["AVAILABILITY"] = 'NO' if rented else 'yes'
+               with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json",'w') as fileobj:
+                    json.dump(BIKES,fileobj,indent=4)
+
+           except json.JSONDecodeError:
+               print("json file error")
+
+
+
+bikes2=Bike("cd 70","2024","HONDA","AKA 306",2000,"yes")
+bikes2.add_vehicle()
+
+
+
 
 
 
