@@ -1,0 +1,20 @@
+[
+    {
+        "Car Name": "civic",
+        "Car Type": "sedan",
+        "Availability": "no",
+        "Model": "2024",
+        "Company": "honda",
+        "plate no": "aka 306",
+        "Rent per day": 20000
+    },
+    {
+        "Car Name": "civic",
+        "Car Type": "sedan",
+        "Availability": "yes",
+        "Model": "2024",
+        "Company": "honda",
+        "plate no": "aka 305",
+        "Rent per day": 20000
+    }
+]

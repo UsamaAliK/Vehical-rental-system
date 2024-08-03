@@ -1,0 +1,26 @@
+[
+    {
+        "BIKE NAME": "125",
+        "MODEL": "2024",
+        "COMPANY": "HONDA",
+        "PLATE NO": "AKA 306",
+        "RENT PER DAY": 2000,
+        "AVAILABILITY": "NO"
+    },
+    {
+        "BIKE NAME": "cd 70",
+        "MODEL": "2024",
+        "COMPANY": "HONDA",
+        "PLATE NO": "AKA 306",
+        "RENT PER DAY": 2000,
+        "AVAILABILITY": "NO"
+    },
+    {
+        "BIKE NAME": "cd 70",
+        "MODEL": "2024",
+        "COMPANY": "HONDA",
+        "PLATE NO": "AKA 306",
+        "RENT PER DAY": 2000,
+        "AVAILABILITY": "NO"
+    }
+]

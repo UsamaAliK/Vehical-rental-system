@@ -1,0 +1,18 @@
+[
+    {
+        "CUSTOMER NAME": "usama",
+        "CINC": "5454",
+        "BIKE NAME": "cd 70",
+        "PLATE NO": "AKA 306",
+        "DAYS": 6,
+        "RENT PER DAY": 2000
+    },
+    {
+        "CUSTOMER NAME": "ali",
+        "CINC": "44",
+        "BIKE NAME": "125",
+        "PLATE NO": "AKA 306",
+        "DAYS": 5,
+        "RENT PER DAY": 2000
+    }
+]
