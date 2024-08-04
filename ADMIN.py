@@ -111,5 +111,3 @@ class Admin:
         elif option=="2":
             bike=Bike()
             bike.search_vehicel()
-
-

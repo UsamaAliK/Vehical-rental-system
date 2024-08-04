@@ -104,7 +104,3 @@ class car(Vehicle):
                 json.dump(CARS,fileobj,indent=4)
         except json.JSONDecodeError:
             print("JSON FILE ERROR!\n")
-
-
-
-

@@ -187,13 +187,3 @@ class Customer():
 
     def search_vehical(self,vehicals=Vehicle()):
         vehicals.search_vehicel()
-
-
-
-
-
-
-
-
-
-

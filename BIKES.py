@@ -100,20 +100,3 @@ class Bike(Vehicle):
 
            except json.JSONDecodeError:
                print("json file error")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
