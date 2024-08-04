@@ -108,6 +108,8 @@ class Customer():
         car_name=input("ENTER THE CAR NAME THAT YOU ARE RETURNING: ")
         plate_no=input("ENTER LISENCE PLATE NUM OF CAR: ")
         cars = car()
+        rent=0
+        days=0
 
         if cars.check_availability(car_name,plate_no):
             print("THIS CAR IS ALREADY RETURNED!\n")
@@ -147,7 +149,38 @@ class Customer():
 
 
     def return_bike(self):
-        name=input("ENTER")
+        name=input("ENTER THE YOUR NAME: ")
+        bike_name=input("ENTER THE NAME OF BIKE YOU ARE RETURNING: ")
+        plate_no=input("ETNER THE LISENCE PLATE NUMBER OF BIKE: ")
+        bike=Bike()
+        rent=0
+        days=0
+
+        if bike.check_availability(bike_name,plate_no):
+            print("THIS BIKE IS ALREADY RETURNED! ")
+        else:
+            with open("/Users/apple/Documents/Vehical-rental-system/rented bikes.json",'r') as fileobj:
+                try:
+                    BIKE=json.load(fileobj)
+                    rented_bike=[bikez for bikez in BIKE if not(bikez["CUSTOMER NAME"]==name and bikez["BIKE NAME"]==bike_name and bikez["PLATE NO"]==plate_no)]
+
+                    for bikez in BIKE:
+                        if bikez["CUSTOMER NAME"]==name and bikez["BIKE NAME"]==bike_name and bikez["PLATE NO"]==plate_no:
+                            days=int(bikez["DAYS"])
+                            rent=int(bikez["RENT PER DAY"])
+                except json.JSONDecodeError:
+                    print("JSON FILE ERROR!\n")
+            with open("/Users/apple/Documents/Vehical-rental-system/rented bikes.json","w") as fileobj:
+                json.dump(rented_bike,fileobj,indent=4)
+                bike.update_the_availability(False,bike_name,plate_no)
+            total_cost=rent*days
+            print("HERE IS YOUR BILL: ")
+            print("NUMBER OF DAYS: "+str(days))
+            print("RENT PER DAY FOR "+bike_name+" IS "+str(rent))
+            print("TOATL AMOUNT YOU HAVE TO PAY IS: "+str(total_cost))
+
+
+
 
 
 
