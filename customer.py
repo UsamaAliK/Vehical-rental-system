@@ -1,6 +1,7 @@
 import json
 from BIKES import Bike
 from Car import car
+from  vehical import Vehicle
 class Customer():
 
 
@@ -178,6 +179,15 @@ class Customer():
             print("NUMBER OF DAYS: "+str(days))
             print("RENT PER DAY FOR "+bike_name+" IS "+str(rent))
             print("TOATL AMOUNT YOU HAVE TO PAY IS: "+str(total_cost))
+
+
+    def show_vehcicals(self,vehicals=Vehicle()):
+        vehicals.show_all_vehicels()
+
+
+    def search_vehical(self,vehicals=Vehicle()):
+        vehicals.search_vehicel()
+
 
 
 
