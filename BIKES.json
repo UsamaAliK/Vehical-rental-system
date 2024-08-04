@@ -5,7 +5,7 @@
         "COMPANY": "HONDA",
         "PLATE NO": "AKA 306",
         "RENT PER DAY": 2000,
-        "AVAILABILITY": "NO"
+        "AVAILABILITY": "yes"
     },
     {
         "BIKE NAME": "cd 70",
@@ -13,7 +13,7 @@
         "COMPANY": "HONDA",
         "PLATE NO": "AKA 306",
         "RENT PER DAY": 2000,
-        "AVAILABILITY": "NO"
+        "AVAILABILITY": "yes"
     },
     {
         "BIKE NAME": "cd 70",
@@ -21,6 +21,14 @@
         "COMPANY": "HONDA",
         "PLATE NO": "AKA 306",
         "RENT PER DAY": 2000,
-        "AVAILABILITY": "NO"
+        "AVAILABILITY": "yes"
+    },
+    {
+        "BIKE NAME": "cb 1000R",
+        "MODEL": "2023",
+        "COMPANY": "HONDa",
+        "PLATE NO": "lez 234",
+        "RENT PER DAY": 25000,
+        "AVAILABILITY": "yes"
     }
 ]

@@ -194,6 +194,8 @@ class Customer():
 
 
 
+cus=Customer()
+cus.Rent_a_car()
 
 
 

@@ -11,10 +11,19 @@
     {
         "Car Name": "civic",
         "Car Type": "sedan",
-        "Availability": "yes",
+        "Availability": "no",
         "Model": "2024",
         "Company": "honda",
         "plate no": "aka 305",
         "Rent per day": 20000
+    },
+    {
+        "Car Name": "grandi",
+        "Car Type": "sedan",
+        "Availability": "YES",
+        "Model": "2023",
+        "Company": "toyota",
+        "plate no": "lex 12",
+        "Rent per day": 30000
     }
 ]

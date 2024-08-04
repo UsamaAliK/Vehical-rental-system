@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "CUSTOMER NAME": "usama",
+        "CINC": "33-33",
+        "Car Name": "civic",
+        "Car Plate": "aka 306",
+        "DAYS": 5,
+        "RENT PER DAY": 20000
+    },
+    {
+        "CUSTOMER NAME": "ali",
+        "CINC": "32332",
+        "Car Name": "civic",
+        "Car Plate": "aka 305",
+        "DAYS": 5,
+        "RENT PER DAY": 20000
+    }
+]

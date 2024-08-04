@@ -39,15 +39,14 @@ class Bike(Vehicle):
             try:
                 BIKES=json.load(fileobj)
                 for bikez in BIKES:
-                   if name==bikez["BIKE NAME"]:
+                   if name.lower()==bikez["BIKE NAME"].lower():
                         print(f"BIKE NAME: {bikez["BIKE NAME"]}")
                         print(f"MODEL: {bikez["MODEL"]}")
                         print(f"COMPANY: {bikez['COMPANY']}")
                         print(f"PLATE NO: {bikez['PLATE NO']}")
                         print(f"RENT PER DAY: {bikez["RENT PER DAY"]}")
                         print(f"AVAILABILITY: {bikez['AVAILABILITY']}")
-                   else:
-                       print("NO BIKE FOUND WITH THIS NAME\n")
+
             except json.JSONDecodeError:
                 print("BIKE NOT FOUND!\n")
 
@@ -57,6 +56,7 @@ class Bike(Vehicle):
             fileobj.seek(0)
             try:
                 BIKES=json.load(fileobj)
+                print("ALL BIKES AVAILABLE IN GERAGE ARE LISTED BELOW: \n")
                 for bikez in BIKES:
                    print(f"BIKE NAME: {bikez["BIKE NAME"]}")
                    print(f"MODEL: {bikez["MODEL"]}")
@@ -64,6 +64,7 @@ class Bike(Vehicle):
                    print(f"PLATE NO: {bikez['PLATE NO']}")
                    print(f"RENT PER DAY: {bikez["RENT PER DAY"]}")
                    print(f"AVAILABILITY: {bikez['AVAILABILITY']}\n")
+                print("-------------------------------------------")
             except json.JSONDecodeError:
                 print("THERE IS NO BIKE IN GERAGE\n ")
 
@@ -73,7 +74,7 @@ class Bike(Vehicle):
             try:
                 BIKES=json.load(fileobj)
                 for bikez in BIKES:
-                    if bikez["BIKE NAME"]==name and bikez['PLATE NO']==plate:
+                    if bikez["BIKE NAME"].lower()==name.lower() and bikez['PLATE NO'].lower()==plate.lower():
                         if bikez["AVAILABILITY"].lower()=='yes':
                             return True
                 return False
@@ -92,8 +93,8 @@ class Bike(Vehicle):
                    BIKES=json.load(fileobj)
 
                for bikez in BIKES:
-                    if bikez["BIKE NAME"]==name and bikez["PLATE NO"]==plate_no:
-                        bikez["AVAILABILITY"] = 'NO' if rented else 'yes'
+                    if bikez["BIKE NAME"].lower()==name.lower() and bikez["PLATE NO"].lower()==plate_no.lower():
+                        bikez["AVAILABILITY"] = 'no' if rented else 'yes'
                with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json",'w') as fileobj:
                     json.dump(BIKES,fileobj,indent=4)
 

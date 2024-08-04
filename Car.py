@@ -1,7 +1,7 @@
 import json
 from vehical import Vehicle
 class car(Vehicle):
-    def __init__(self,model="",company="",lisence_plate="",rent_price=0,avaiable="",car_name="",car_type=""):
+    def __init__(self,model="",company="",lisence_plate="",rent_price=0,avaiable="yes",car_name="",car_type=""):
         super().__init__(model,company,lisence_plate,rent_price,avaiable)
         self.car_name=car_name
         self.car_type=car_type
@@ -37,7 +37,7 @@ class car(Vehicle):
             try:
 
               CARS=json.load(fileobj)
-              print("ALL CARS:\n")
+              print("ALL CARS AVAILABLE IN GERAGE ARE LISTED BELOW:\n")
               for carz in CARS:
                  print(carz['Car Name'].upper() + "'s INFO")
                  print(f"Car Name: {carz["Car Name"].upper()}")
@@ -47,7 +47,7 @@ class car(Vehicle):
                  print(f"Company: {carz["Company"]}")
                  print(f"Plate No: {carz['plate no']}")
                  print(f"Rent per day {carz['Rent per day']}\n")
-                 print("_____________________________________")
+              print("_____________________________________")
 
             except  json.JSONDecodeError:
                 print("FILE contain nothing")
@@ -60,7 +60,7 @@ class car(Vehicle):
 
               CARS=json.load(fileobj)
               for carz in CARS:
-                 if name==carz["Car Name"]:
+                 if name.lower()==carz["Car Name"].lower():
 
                    print(f"Car Name: {carz["Car Name"]}")
                    print(f"Car Type: {carz['Car Type']}")
@@ -69,9 +69,7 @@ class car(Vehicle):
                    print(f"Company: {carz["Company"]}")
                    print(f"Plate No: {carz['plate no']}")
                    print(f"Rent per day {carz['Rent per day']}\n")
-                 else:
 
-                    print("CAR NOT FOUND")
 
           except json.JSONDecodeError:
 
@@ -100,7 +98,7 @@ class car(Vehicle):
                 fileobj.seek(0)
                 CARS=json.load(fileobj)
             for carz in CARS:
-                 if carz["Car Name"]==name and carz["plate no"]==plate_no:
+                 if carz["Car Name"].lower()==name.lower() and carz["plate no"].lower()==plate_no.lower():
                      carz['Availability']='no' if rented else 'yes'
             with open("/Users/apple/Documents/Vehical-rental-system/cars.json","w") as fileobj:
                 json.dump(CARS,fileobj,indent=4)
@@ -109,5 +107,4 @@ class car(Vehicle):
 
 
 
-cars=car("2024","honda","aka 305",20000,"yes","civic","sedan")
-#cars.c
+
