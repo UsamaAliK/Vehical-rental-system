@@ -1,4 +1,6 @@
 import json
+import os
+
 from vehical import Vehicle
 class car(Vehicle):
     def __init__(self,model="",company="",lisence_plate="",rent_price=0,avaiable="yes",car_name="",car_type=""):
@@ -51,6 +53,8 @@ class car(Vehicle):
 
             except  json.JSONDecodeError:
                 print("FILE contain nothing")
+        input("PRESS ENTER TO CONTINUE:")
+        os.system('clear')
 
     def search_vehicel(self):
         with open("/Users/apple/Documents/Vehical-rental-system/cars.json",'r') as fileobj:

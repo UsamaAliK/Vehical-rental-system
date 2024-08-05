@@ -1,6 +1,7 @@
 import json
 
 from vehical import Vehicle
+import os
 class Bike(Vehicle):
     def __init__(self,bike_name="",model="",company="",lisence_plate="",rent_price=0,available=""):
         super().__init__(model,company,lisence_plate,rent_price,available)
@@ -67,6 +68,8 @@ class Bike(Vehicle):
                 print("-------------------------------------------")
             except json.JSONDecodeError:
                 print("THERE IS NO BIKE IN GERAGE\n ")
+        input("PRESS ENTER TO CONTINUE:")
+        os.system("clear")
 
     def check_availability(self,name,plate):
         with open("/Users/apple/Documents/Vehical-rental-system/BIKES.json",'r') as fileobj:

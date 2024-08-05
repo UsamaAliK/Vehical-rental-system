@@ -1,4 +1,6 @@
 import json
+import os
+
 from BIKES import Bike
 from Car import car
 from  vehical import Vehicle
@@ -175,10 +177,13 @@ class Customer():
                 json.dump(rented_bike,fileobj,indent=4)
                 bike.update_the_availability(False,bike_name,plate_no)
             total_cost=rent*days
+            os.system("clear")
             print("HERE IS YOUR BILL: ")
             print("NUMBER OF DAYS: "+str(days))
             print("RENT PER DAY FOR "+bike_name+" IS "+str(rent))
             print("TOATL AMOUNT YOU HAVE TO PAY IS: "+str(total_cost))
+            input("PRESS ENTER TO CONTINUE:")
+
 
 
     def show_vehcicals(self,vehicals=Vehicle()):
